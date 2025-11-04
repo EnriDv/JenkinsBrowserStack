@@ -22,7 +22,7 @@ pipeline {
         
         stage('Checkout') {
             steps {
-                git branch: 'master', url: ''
+                git branch: 'master', url: 'https://github.com/EnriDv/JenkinsBrowserStack.git'
             }
         }
 
