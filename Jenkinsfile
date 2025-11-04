@@ -40,14 +40,14 @@ pipeline {
 
         stage('Report') {
             steps {
-                echo "Generando reporte"
+                echo "Generando Reporte"
                 bat "npx allure generate %ALLURE_RESULTS% -c -o %ALLURE_REPORT%"
             }
         }
 
         stage('Publish report') {
             steps {
-                echo "Publicando reporte"
+                echo "Publicando Reporte"
                 allure includeProperties: 
                     false,
                     jdk: '',
@@ -58,7 +58,7 @@ pipeline {
 
     post {
         always {
-            echo "Pipeline finalizada"
+            echo "Finalizado"
         }
     }
 }
